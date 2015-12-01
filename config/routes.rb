@@ -1,4 +1,20 @@
 Rails.application.routes.draw do
+  get 'home/index'
+
+  get 'home/new'
+
+  get 'home/create'
+
+  get 'home/update'
+
+  get 'home/edit'
+
+  get 'home/destroy'
+
+  get 'home/index'
+
+  get 'home/show'
+
   get 'sessions/new'
 
   get 'sessions/create'
