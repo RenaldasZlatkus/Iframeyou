@@ -12,7 +12,7 @@ class UsersController < ApplicationController
     else
       flash.now[:alert] = "There was a problem saving your account"
       render "new"
-
+     end
   end
 
 	def show
