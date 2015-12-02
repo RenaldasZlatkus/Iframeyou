@@ -11,49 +11,117 @@
 	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 </p>
-<body>
-	<table width="100%" align="left">
 
-<tr><td>
-	<p class="click"><a href = "javascript:void(0)" onclick = "createlightbox()">click here for sign-up Form </a></p>
+<!-- sign-up link -->
 
-	<div id="light" class="white_content" > 
-		<a href = "javascript:void(0)" onclick = "closelightbox()" style="float:right">
-			<img src="http://2.bp.blogspot.com/-aXHXnOQPBJM/Tx_p1qqNI4I/AAAAAAAAAeU/bH0tlsikADQ/s1600/icon_cancel.gif" alt="" /></a>      
-			<table align="center" cellpadding="5" cellspacing="5" >
-				<tr>
-					<td colspan="2" class="Title" align="center">Signup Form</td>
-	</tr>
+<table width="100%" align="left">
+<p class="click"><a href = "javascript:void(0)" onclick = "createlightbox('signup-lightbox')">sign up </a>
+</p>
 <tr>
+<td>
+<div id="signup-lightbox" class="white_content" > 
+<a href = "javascript:void(0)" onclick = "closelightbox('signup-lightbox')" style="float:right">
+<img src="http://2.bp.blogspot.com/-aXHXnOQPBJM/Tx_p1qqNI4I/AAAAAAAAAeU/bH0tlsikADQ/s1600/icon_cancel.gif" alt="" /></a>      
+<table align="center" cellpadding="5" cellspacing="5" >
+<tr>
+<td colspan="2" class="Title" align="center">Signup Form</td>
+</tr>
+
+<tr>
+<td class="label">              
+first Name:</td>
+<td align="center">
+
+<input id="Text1" type="text" /></td>
+</tr>
+
+<tr>
+<td class="label">              
+last Name:</td>
+<td align="center">
+
+<input id="Text1" type="text" /></td>
+</tr>
+
+<tr>
+<td class="label">              
+email:</td>
+<td align="center">
+
+<input id="Text1" type="text" /></td>
+</tr>
+
+<tr>
+<td class="label">              
+	Password:</td>
+	<td align="center">
+
+		<input id="Text2" type="password"/></td>
+	</tr>
+
+	<tr>
+		<td class="label">              
+			Confirm-Password:</td>
+			<td align="center">
+				<input id="Text3" type="password" /></td>
+			</tr>
+
+			<tr>
+				<td>              
+					<input id="Button1" type="button" value="sign-up"/>
+				</td>
+			</tr>
+		</table>
+	</div>
+</td>
+</tr>
+
+</table>   
+
+<div id="fade" class="black_overlay"></div>
+
+
+<!-- login form -->
+
+<table width="100%" align="left">
+<tr><td>
+<p class="click"><a href = "javascript:void(0)" onclick = "createlightbox('login-lightbox')">login </a></p>
+
+<div id="login-lightbox" class="white_content" > 
+	<a href = "javascript:void(0)" onclick = "closelightbox('login-lightbox')" style="float:right">
+	<img src="http://2.bp.blogspot.com/-aXHXnOQPBJM/Tx_p1qqNI4I/AAAAAAAAAeU/bH0tlsikADQ/s1600/icon_cancel.gif" alt="" /></a>      
+	<table align="center" cellpadding="5" cellspacing="5" >
+<tr>
+	<td colspan="2" class="Title" align="center">Login Form</td>
+</tr>
+	<tr>
 	<td class="label">              
-		UserName:</td>
+		email:</td>
 		<td align="center">
-
-			<input id="Text1" type="text" /></td>
-		</tr>
+		<input id="Text1" type="text" /></td>
+	</tr>
+	<tr>
+	<td class="label">              
+		Password:</td>
+		<td align="center">
+		<input id="Text2" type="password" /></td>
+	</tr>
 		<tr>
-			<td class="label">              
-				Password:</td>
-				<td align="center">
+		<td>              
+	<input id="Button1" type="button" value="Login" />
+	</td>
+	</tr>
+	</table>
+		</div>
+		</td>
+		</tr>
+</table>
 
-					<input id="Text2" type="password" /></td>
-				</tr>
 
-				<tr>
-					<td class="label">              
-						Confirm-Password:</td>
-						<td align="center">
 
-							<input id="Text3" type="password" /></td>
-						</tr>
 
-						<tr>
-							<td>              
-								<input id="Button1" type="button" value="sign-up"/></td></tr></table>
-							</div></td></tr>
 
-						</table>   
 
-						<div id="fade" class="black_overlay"></div>
 
-     </body>
+
+
