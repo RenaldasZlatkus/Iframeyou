@@ -17,10 +17,10 @@ class UsersController < ApplicationController
 
 	def show
 		@user = User.find_by_id params[:id]
-		@settings = @user.settings.find_by_id params[:id]
+		@settings = @user.setting
 		if @settings.frames == 1
 			render :oneframe
-		elsif @ settings.frames == 2
+		elsif @settings.frames == 2
 			render :twoframe
 		elsif @settings.frames == 3
 			render :threeframe

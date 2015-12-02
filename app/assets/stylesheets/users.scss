@@ -5,4 +5,64 @@
 @import 'skin';
 @import 'background';
 
+h1 {
+	text-align: center;
+}
 
+#description {
+	width: 500px;
+	margin: auto;
+	font-style: Arial Narrow;
+	font-size: 20px;
+	border: 3px solid black;
+	background: black;
+	opacity: .7;
+	color: aqua;
+}
+
+ // general styling for menu image
+.menu {
+	position: absolute;
+	top: 5px;
+	right: 5px;
+}
+
+.menubox {
+	position: absolute;
+	top: 1px;
+	right: 1px;
+}
+
+// styling for image in particular
+#image {
+	width: 20px;
+}
+
+.options {
+	opacity: 1;
+}
+
+.settings {
+	width: 200px;
+	position: absolute;
+	top: 1px;
+	right: 1px;
+	background: rgba(0, 0, 0, .7);
+	color: white;
+	padding-left: 7px;
+	border: 3px solid black;
+}
+
+.icon {
+	width: 20px;
+	opacity: 1;
+}
+
+#submit {
+	text-align: center;
+}
+
+#menubutton {
+	margin: auto;
+	width: 75px;
+}

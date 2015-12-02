@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-	has_many :settings
+	has_one :setting
 	has_many :websites
 
     validates :email, uniqueness: true

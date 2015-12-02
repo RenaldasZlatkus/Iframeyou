@@ -8,6 +8,60 @@
 </head>
 <body>
 
+
+<div>
+	<a href="#" class="menu"><img src="/images/threebars.png" id="image"></a>
+
+	<div class="settings">
+		<a href="#" class="menubox"><img src="/images/threebars.png" id="image"></a>
+		<br><br>
+
+		<p class="categories">
+			Frames and Layout
+		</p>
+		<div id="frames-and-layout">
+			<a href="#" class="options" data-field-value="2h" data-field-number="2"><img src="/images/2h.png" class="icon"></a>
+			<a href="#" class="options" data-field-value="2v"><img src="/images/threebars.png" class="icon"></a>
+			<a href="#" class="options" data-field-value="3h"><img src="/images/threebars.png" class="icon"></a>
+			<a href="#" class="options" data-field-value="3t"><img src="/images/threebars.png" class="icon"></a>
+			<a href="#" class="options" data-field-value="3b"><img src="/images/threebars.png" class="icon"></a>
+			<a href="#" class="options" data-field-value="4a"><img src="/images/threebars.png" class="icon"></a>
+			<a href="#" class="options" data-field-value="4t"><img src="/images/threebars.png" class="icon"></a>
+			<a href="#" class="options" data-field-value="4b"><img src="/images/threebars.png" class="icon"></a>
+		</div>
+		<p class="categories">
+			Skin
+		</p>
+		<div id="skin">
+			<a href="#" class="options" data-field-value="black"><img src="/images/threebars.png" class="icon"></a>
+			<a href="#" class="options" data-field-value="white"><img src="/images/threebars.png" class="icon"></a>
+			<a href="#" class="options" data-field-value="pink"><img src="/images/threebars.png" class="icon"></a>
+			<a href="#" class="options" data-field-value="purple"><img src="/images/threebars.png" class="icon"></a>
+			<a href="#" class="options" data-field-value="blue"><img src="/images/threebars.png" class="icon"></a>
+		</div>
+		<p class="categories">
+			Background
+		</p>
+		<div id="background">
+			<a href="#" class="options" data-field-value="black"><img src="/images/threebars.png" class="icon"></a>
+			<a href="#" class="options" data-field-value="white"><img src="/images/threebars.png" class="icon"></a>
+			<a href="#" class="options" data-field-value="pink"><img src="/images/threebars.png" class="icon"></a>
+			<a href="#" class="options" data-field-value="purple"><img src="/images/threebars.png" class="icon"></a>
+			<a href="#" class="options" data-field-value="blue"><img src="/images/threebars.png" class="icon"></a>
+		</div>
+			<br><br>
+		<%= form_for @settings, url: user_settings_path(@user) do |f| %>
+		<%= f.hidden_field :frames %>
+		<%= f.hidden_field :style %>
+		<%= f.hidden_field :skin %>
+		<%= f.hidden_field :background %>	
+		<div id="submit">
+			<%= f.submit 'Submit' %>
+		</div>
+		<% end %>
+	</div>
+</div>
+
 <%= yield %>
 
 </body>
