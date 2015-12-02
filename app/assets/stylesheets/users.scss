@@ -1,40 +1,8 @@
 // Place all the styles related to the users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-%iframe {
-	width: 49.5%;
-	height: 21.5em;
-	border: 2px solid blue; 
-	overflow: hidden;
-	margin: 0px;
-	padding: 0px;
-}
+@import 'frame_style';
+@import 'skin';
+@import 'background';
 
-#topright {
-	@extend %iframe;
-	float: right;
-}
 
-#topleft {
-	@extend %iframe;
-}
-
-#bottomright {
-	@extend %iframe;
-	float: right;
-}
-
-#bottomleft {
-	@extend %iframe;
-	float: left;
-}
-
-#topwide {
-	@extend %iframe;
-	width: 100%;
-}
-
-#bottomwide {
-	@extend %iframe;
-	width: 100%;
-}
