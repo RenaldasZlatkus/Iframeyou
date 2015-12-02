@@ -11,19 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151201135558) do
+ActiveRecord::Schema.define(version: 20151201202408) do
 
   create_table "settings", force: :cascade do |t|
     t.integer  "frames"
     t.string   "skin"
     t.string   "stye"
     t.string   "background"
-    t.integer  "user_id_id"
+    t.integer  "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  add_index "settings", ["user_id_id"], name: "index_settings_on_user_id_id"
+  add_index "settings", ["user_id"], name: "index_settings_on_user_id"
 
   create_table "users", force: :cascade do |t|
     t.string   "fname"
@@ -36,11 +36,11 @@ ActiveRecord::Schema.define(version: 20151201135558) do
 
   create_table "websites", force: :cascade do |t|
     t.string   "url"
-    t.integer  "user_id_id"
+    t.integer  "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  add_index "websites", ["user_id_id"], name: "index_websites_on_user_id_id"
+  add_index "websites", ["user_id"], name: "index_websites_on_user_id"
 
 end

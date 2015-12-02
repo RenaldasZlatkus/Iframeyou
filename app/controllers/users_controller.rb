@@ -15,20 +15,23 @@ class UsersController < ApplicationController
 
   end
 
-  def update
-  end
+	def show
+		@user = User.find_by_id params[:id]
+		@settings = @user.settings.find_by_id params[:id]
+		render :frame
+	end 
 
-  def edit
-  end
+	def update
+	end
 
-  def destroy
-  end
+	def edit
+	end
 
   def index
     @user = User.all
   end
 
-  def show
-    @user = User.find(params[:id])
-  end
+	def destroy
+	end
+
 end
