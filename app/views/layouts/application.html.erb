@@ -12,7 +12,7 @@
 <div>
 	<a href="#" class="menu"><img src="/images/threebars.png" id="image"></a>
 
-	<div class="settings">
+	<div class="settings <%= @settings.background %>-bg <%= @settings.skin %>">
 		<a href="#" class="menubox"><img src="/images/threebars.png" id="image"></a>
 		<br><br>
 
@@ -21,13 +21,13 @@
 		</p>
 		<div id="frames-and-layout">
 			<a href="#" class="options" data-field-value="2h" data-field-number="2"><img src="/images/2h.png" class="icon"></a>
-			<a href="#" class="options" data-field-value="2v"><img src="/images/threebars.png" class="icon"></a>
-			<a href="#" class="options" data-field-value="3h"><img src="/images/threebars.png" class="icon"></a>
-			<a href="#" class="options" data-field-value="3t"><img src="/images/threebars.png" class="icon"></a>
-			<a href="#" class="options" data-field-value="3b"><img src="/images/threebars.png" class="icon"></a>
-			<a href="#" class="options" data-field-value="4a"><img src="/images/threebars.png" class="icon"></a>
-			<a href="#" class="options" data-field-value="4t"><img src="/images/threebars.png" class="icon"></a>
-			<a href="#" class="options" data-field-value="4b"><img src="/images/threebars.png" class="icon"></a>
+			<a href="#" class="options" data-field-value="2v" data-field-number="2"><img src="/images/threebars.png" class="icon"></a>
+			<a href="#" class="options" data-field-value="3h" data-field-number="3"><img src="/images/threebars.png" class="icon"></a>
+			<a href="#" class="options" data-field-value="3t"  data-field-number="3"><img src="/images/threebars.png" class="icon"></a>
+			<a href="#" class="options" data-field-value="3b"  data-field-number="3"><img src="/images/threebars.png" class="icon"></a>
+			<a href="#" class="options" data-field-value="4a" data-field-number="4"><img src="/images/threebars.png" class="icon"></a>
+			<a href="#" class="options" data-field-value="4t" data-field-number="4"><img src="/images/threebars.png" class="icon"></a>
+			<a href="#" class="options" data-field-value="4b" data-field-number="4"><img src="/images/threebars.png" class="icon"></a>
 		</div>
 		<p class="categories">
 			Skin
@@ -54,7 +54,15 @@
 		<%= f.hidden_field :frames %>
 		<%= f.hidden_field :style %>
 		<%= f.hidden_field :skin %>
-		<%= f.hidden_field :background %>	
+		<%= f.hidden_field :background %>
+		<%= f.label :website1, 'Website For Frame One' %><br>
+		<%= f.text_field :website1 %><br><br>
+		<%= f.label :website2, 'Website For Frame Two' %><br>
+		<%= f.text_field :website2 %><br><br>
+		<%= f.label :website3, 'Website For Frame Three' %><br>
+		<%= f.text_field :website3 %><br><br>
+		<%= f.label :website4, 'Website For Frame Four' %><br>
+		<%= f.text_field :website4 %><br><br>
 		<div id="submit">
 			<%= f.submit 'Submit' %>
 		</div>

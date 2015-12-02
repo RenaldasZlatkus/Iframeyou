@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151202125149) do
+ActiveRecord::Schema.define(version: 20151202171930) do
 
   create_table "settings", force: :cascade do |t|
     t.integer  "frames"
@@ -21,6 +21,10 @@ ActiveRecord::Schema.define(version: 20151202125149) do
     t.integer  "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "website1"
+    t.string   "website2"
+    t.string   "website3"
+    t.string   "website4"
   end
 
   add_index "settings", ["user_id"], name: "index_settings_on_user_id"
