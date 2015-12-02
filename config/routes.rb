@@ -1,19 +1,13 @@
 Rails.application.routes.draw do
-  get 'home/index'
 
-  get 'home/new'
+  root 'home#index'
 
-  get 'home/create'
-
-  get 'home/update'
-
-  get 'home/edit'
-
-  get 'home/destroy'
+  resources :users do
+    resources :websites 
+    resources :settings
+  end
 
   get 'home/index'
-
-  get 'home/show'
 
   get 'sessions/new'
 
@@ -29,34 +23,6 @@ Rails.application.routes.draw do
 
   get 'sessions/show'
 
-  get 'settings/new'
-
-  get 'settings/create'
-
-  get 'settings/update'
-
-  get 'settings/edit'
-
-  get 'settings/destroy'
-
-  get 'settings/index'
-
-  get 'settings/show'
-
-  get 'websites/new'
-
-  get 'websites/create'
-
-  get 'websites/update'
-
-  get 'websites/edit'
-
-  get 'websites/destroy'
-
-  get 'websites/index'
-
-  get 'websites/show'
-
   get 'users/new'
 
   get 'users/create'
@@ -71,25 +37,42 @@ Rails.application.routes.draw do
 
   get 'users/show'
 
-  get 'users/new'
+  # get 'settings/new'
 
-  get 'users/create'
+  # get 'settings/create'
 
-  get 'users/update'
+  # get 'settings/update'
 
-  get 'users/edit'
+  # get 'settings/edit'
 
-  get 'users/destroy'
+  # get 'settings/destroy'
 
-  get 'users/index'
+  # get 'settings/index'
 
-  get 'users/show'
+  # get 'settings/show'
+
+  # get 'websites/new'
+
+  # get 'websites/create'
+
+  # get 'websites/update'
+
+  # get 'websites/edit'
+
+  # get 'websites/destroy'
+
+  # get 'websites/index'
+
+  # get 'websites/show'
+
+
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'home#index'
+
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
@@ -100,10 +83,7 @@ Rails.application.routes.draw do
   # Example resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
 
-  resources :users do
-    resources :websites 
-    resources :settings
-  end
+
 
   # Example resource route with options:
   #   resources :products do

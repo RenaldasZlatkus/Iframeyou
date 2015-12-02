@@ -3,7 +3,8 @@ class UsersController < ApplicationController
   	end
 
 	def show
-		# @user = User.find_by_id params[:id]
+		@user = User.find_by_id params[:id]
+		@settings = @user.settings.find_by_id params[:id]
 		render :frame
 	end 
 
