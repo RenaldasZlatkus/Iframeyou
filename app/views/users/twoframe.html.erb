@@ -1,10 +1,10 @@
 
 <% if @settings.style == "2H" %>
-	<iframe src="https://www.duckduckgo.com" class="full"></iframe>
-	<iframe src="http://nycda.com/" class="full"></iframe>
+	<iframe src="https://www.duckduckgo.com" class="full <%= @setting.background %>-bg <%= @setting.skin %>"></iframe>
+	<iframe src="http://nycda.com/" class="full <%= @setting.background %>-bg <%= @setting.skin %>"></iframe>
 <% elsif @settings.style == "2V" %>
-	<iframe src="https://www.duckduckgo.com" id="leftfull"></iframe>
-	<iframe src="http://nycda.com/" id="rightfull"></iframe>
+	<iframe src="https://www.duckduckgo.com" id="leftfull <%= @setting.background %>-bg <%= @setting.skin %>"></iframe>
+	<iframe src="http://nycda.com/" id="rightfull <%= @setting.background %>-bg <%= @setting.skin %>"></iframe>
 <% end %>
 
 
