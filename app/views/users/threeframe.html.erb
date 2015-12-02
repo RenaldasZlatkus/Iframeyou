@@ -1,0 +1,21 @@
+<% if @settings.style == "3H" %>
+	<iframe src="https://www.duckduckgo.com" class="leftthree <%= @setting.background %>-bg <%= @setting.skin %>"></iframe>
+	<iframe src="http://nycda.com/" class="leftthree <%= @setting.background %>-bg <%= @setting.skin %>"></iframe>
+	<iframe src="http://nycda.zone/yahnendgo693/smlp/index.html" class="rightthree <%= @setting.background %>-bg <%= @setting.skin %>"></iframe>
+<% elsif @settings.style == "3B" %>
+	<iframe src="https://www.duckduckgo.com" class="left <%= @setting.background %>-bg <%= @setting.skin %>"></iframe>
+	<iframe src="http://nycda.com/" class="right <%= @setting.background %>-bg <%= @setting.skin %>"></iframe>
+	<iframe src="http://nycda.zone/yahnendgo693/smlp/index.html" class="full <%= @setting.background %>-bg <%= @setting.skin %>"></iframe>
+<% elsif @settings.style == "3T" %>
+	<iframe src="https://www.duckduckgo.com" class="full <%= @setting.background %>-bg <%= @setting.skin %>"></iframe>
+	<iframe src="http://nycda.com/" class="left <%= @setting.background %>-bg <%= @setting.skin %>"></iframe>
+	<iframe src="http://nycda.zone/yahnendgo693/smlp/index.html" class="right <%= @setting.background %>-bg <%= @setting.skin %>"></iframe>
+<% end %>
+
+
+
+
+
+
+
+

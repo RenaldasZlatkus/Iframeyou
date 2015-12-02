@@ -11,12 +11,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151201202408) do
+ActiveRecord::Schema.define(version: 20151202125149) do
 
   create_table "settings", force: :cascade do |t|
     t.integer  "frames"
     t.string   "skin"
-    t.string   "stye"
+    t.string   "style"
     t.string   "background"
     t.integer  "user_id"
     t.datetime "created_at", null: false

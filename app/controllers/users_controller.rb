@@ -18,7 +18,15 @@ class UsersController < ApplicationController
 	def show
 		@user = User.find_by_id params[:id]
 		@settings = @user.settings.find_by_id params[:id]
-		render :frame
+		if @settings.frames == 1
+			render :oneframe
+		elsif @ settings.frames == 2
+			render :twoframe
+		elsif @settings.frames == 3
+			render :threeframe
+		elsif @settings.frames == 4
+			render :fourframe
+		end 
 	end 
 
 	def update
