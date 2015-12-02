@@ -25,17 +25,23 @@ h1 {
 	position: absolute;
 	top: 5px;
 	right: 5px;
+	width: 30px;
+	text-align: center;
+	height: 30px;
+
+
 }
 
 .menubox {
 	position: absolute;
-	top: 1px;
-	right: 1px;
+	top: 4px;
+	right: 9px;
 }
 
 // styling for image in particular
 #image {
 	width: 20px;
+	margin-top: 4px;
 }
 
 .options {

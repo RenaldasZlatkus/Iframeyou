@@ -17,4 +17,17 @@ $(document).ready(function() {
 		$('#setting_background').val(value);
 	});
 
+	$(".menu").click(function() {
+		$(".settings").show();
+		$(".menu").hide();
+	})
+
+	$(".menubox").click(function() {
+		$(".settings").hide();
+		$(".menu").show();
+	})
+
+	$(document).ready(function() {
+		$(".settings").hide();
+	})
 });
