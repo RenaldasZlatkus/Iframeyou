@@ -1,19 +1,21 @@
+// chose rgba so can lower opacity without changing opacity of other elements
+
 .black-bg {
-	background: rgba(0, 0, 0, .7);
+	background: rgba(0, 0, 0, .8);
 }
 
 .pink-bg {
-	background: gba(247, 139, 209, .7);
+	background: rgba(247, 139, 209, .8);
 }
 
 .purple-bg {
-	background: rgba(129, 70, 189, .7);
+	background: rgba(129, 70, 189, .8);
 }
 
 .white-bg {
-	background: rgba(255, 255, 255, .7);
+	background: rgba(255, 255, 255, .8);
 }
 
 .blue-bg {
-	background: rgba(20, 42, 166, .7);
+	background: rgba(20, 42, 166, .8);
 }
