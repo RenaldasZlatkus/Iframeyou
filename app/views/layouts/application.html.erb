@@ -19,14 +19,15 @@
 			Frames and Layout
 		</p>
 		<div id="frames-and-layout">
-			<a href="#" class="options" data-field-value="2h" data-field-number="2"><img src="/images/2h.png" class="icon"></a>
-			<a href="#" class="options" data-field-value="2v" data-field-number="2"><img src="/images/threebars.png" class="icon"></a>
-			<a href="#" class="options" data-field-value="3h" data-field-number="3"><img src="/images/threebars.png" class="icon"></a>
-			<a href="#" class="options" data-field-value="3t"  data-field-number="3"><img src="/images/threebars.png" class="icon"></a>
-			<a href="#" class="options" data-field-value="3b"  data-field-number="3"><img src="/images/threebars.png" class="icon"></a>
-			<a href="#" class="options" data-field-value="4a" data-field-number="4"><img src="/images/threebars.png" class="icon"></a>
-			<a href="#" class="options" data-field-value="4t" data-field-number="4"><img src="/images/threebars.png" class="icon"></a>
-			<a href="#" class="options" data-field-value="4b" data-field-number="4"><img src="/images/threebars.png" class="icon"></a>
+			<a href="#" class="options" data-field-value="1" data-field-number="1"><img src="/images/2h.png" class="icon one"></a>
+			<a href="#" class="options" data-field-value="2h" data-field-number="2"><img src="/images/2h.png" class="icon two"></a>
+			<a href="#" class="options" data-field-value="2v" data-field-number="2"><img src="/images/threebars.png" class="icon two"></a>
+			<a href="#" class="options" data-field-value="3h" data-field-number="3"><img src="/images/threebars.png" class="icon three"></a>
+			<a href="#" class="options" data-field-value="3t"  data-field-number="3"><img src="/images/threebars.png" class="icon three"></a>
+			<a href="#" class="options" data-field-value="3b"  data-field-number="3"><img src="/images/threebars.png" class="icon three"></a>
+			<a href="#" class="options" data-field-value="4a" data-field-number="4"><img src="/images/threebars.png" class="icon four"></a>
+			<a href="#" class="options" data-field-value="4t" data-field-number="4"><img src="/images/threebars.png" class="icon four"></a>
+			<a href="#" class="options" data-field-value="4b" data-field-number="4"><img src="/images/threebars.png" class="icon four"></a>
 		</div>
 		<p class="categories">
 			Skin
@@ -54,14 +55,22 @@
 		<%= f.hidden_field :style %>
 		<%= f.hidden_field :skin %>
 		<%= f.hidden_field :background %>
+		<div id="web1">
 		<%= f.label :website1, 'Website For Frame One' %><br>
 		<%= f.text_field :website1 %><br><br>
+		</div>
+		<div id="web2">
 		<%= f.label :website2, 'Website For Frame Two' %><br>
 		<%= f.text_field :website2 %><br><br>
+		</div>
+		<div id="web3">
 		<%= f.label :website3, 'Website For Frame Three' %><br>
 		<%= f.text_field :website3 %><br><br>
+		</div>
+		<div id="web4">
 		<%= f.label :website4, 'Website For Frame Four' %><br>
 		<%= f.text_field :website4 %><br><br>
+		</div>
 		<div id="submit">
 			<%= f.submit 'Submit' %>
 		</div>

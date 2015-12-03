@@ -6,11 +6,12 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
+    @settings = user.settings.params(frames: "1")
     if @user.save
       flash[:notice] = "Your account was created succesfully."
       redirect_to login_path
     else
-      flash.now[:alert] = "There was a problem saving your account"
+      flash.now[:alert] = "There was a problem saving your account."
       render "new"
      end
   end
