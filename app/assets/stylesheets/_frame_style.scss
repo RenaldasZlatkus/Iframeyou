@@ -25,12 +25,12 @@
 // 	width: 100%;
 // }
 
-#leftfull {
+.leftfull {
 	@extend %iframe;
 	height: 43em;
 }
 
-#rightfull {
+.rightfull {
 	@extend %iframe;
 	height: 43em;
 	float: right;
@@ -57,10 +57,10 @@
 
 .leftthree {
 	@extend %iframe;
-	width: 33%;
+	width: 31%;
 	height: 43em;
 	float: left;
-	margin-left: 2em;
+	margin-left: 1em;
 }
 
 .rightthree {
@@ -72,13 +72,13 @@
 
 .halfleftthree {
 	@extend %iframe;
-	width: 33%;
+	width: 32%;
 	float: left;
-	margin-left: 2em;
+	margin-left: 1em;
 }
 
 .halfrightthree {
 	@extend %iframe;
-	width: 33%;
+	width: 32%;
 	float: right;
 }

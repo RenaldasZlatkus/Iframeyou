@@ -1,15 +1,15 @@
 <% if @settings.style == "3h" %>
-	<iframe src="https://www.duckduckgo.com" class="leftthree <%= @settings.background %>-bg <%= @settings.skin %>"></iframe>
-	<iframe src="http://nycda.com/" class="leftthree <%= @setting.background %>-bg <%= @setting.skin %>"></iframe>
-	<iframe src="http://nycda.zone/yahnendgo693/smlp/index.html" class="rightthree <%= @settings.background %>-bg <%= @settings.skin %>"></iframe>
+	<iframe src="<%= @settings.website1 %>" class="leftthree <%= @settings.background %>-bg <%= @settings.skin %>"></iframe>
+	<iframe src="<%= @settings.website2 %>" class="leftthree <%= @settings.background %>-bg <%= @settings.skin %>"></iframe>
+	<iframe src="<%= @settings.website3 %>" class="rightthree <%= @settings.background %>-bg <%= @settings.skin %>"></iframe>
 <% elsif @settings.style == "3b" %>
-	<iframe src="https://www.duckduckgo.com" class="left <%= @settings.background %>-bg <%= @settings.skin %>"></iframe>
-	<iframe src="http://nycda.com/" class="right <%= @settings.background %>-bg <%= @settings.skin %>"></iframe>
-	<iframe src="http://nycda.zone/yahnendgo693/smlp/index.html" class="full <%= @settings.background %>-bg <%= @settings.skin %>"></iframe>
+	<iframe src="<%= @settings.website1 %>" class="left <%= @settings.background %>-bg <%= @settings.skin %>"></iframe>
+	<iframe src="<%= @settings.website2 %>" class="right <%= @settings.background %>-bg <%= @settings.skin %>"></iframe>
+	<iframe src="<%= @settings.website3 %>" class="full <%= @settings.background %>-bg <%= @settings.skin %>"></iframe>
 <% elsif @settings.style == "3t" %>
-	<iframe src="https://www.duckduckgo.com" class="full <%= @settings.background %>-bg <%= @settings.skin %>"></iframe>
-	<iframe src="http://nycda.com/" class="left <%= @settings.background %>-bg <%= @settings.skin %>"></iframe>
-	<iframe src="http://nycda.zone/yahnendgo693/smlp/index.html" class="right <%= @settings.background %>-bg <%= @settings.skin %>"></iframe>
+	<iframe src="<%= @settings.website1 %>" class="full <%= @settings.background %>-bg <%= @settings.skin %>"></iframe>
+	<iframe src="<%= @settings.website2 %>" class="left <%= @settings.background %>-bg <%= @settings.skin %>"></iframe>
+	<iframe src="<%= @settings.website3 %>" class="right <%= @settings.background %>-bg <%= @settings.skin %>"></iframe>
 <% end %>
 
 

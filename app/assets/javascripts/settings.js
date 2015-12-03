@@ -4,7 +4,6 @@ $(document).ready(function() {
 		number = $(this).data('field-number');
 		$('#setting_style').val(value);
 		$('#setting_frames').val(number);
-
 	});
 
 	$('#skin a').click(function() {
@@ -57,4 +56,17 @@ $(document).ready(function() {
 		$("#web3").show();
 		$("#web4").show();
 	})
+
+	// $("#submit").click(function(){
+	// 	$(this).parents('form').submit();
+	// });
+
+// $(function(){
+//   $('input:checkbox').on('click', function(){
+//     $(this).parents('form').submit();
+//   });
+// });
+
+
+// });
 });

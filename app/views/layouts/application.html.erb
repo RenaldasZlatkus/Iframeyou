@@ -8,6 +8,7 @@
 </head>
 <body>
 
+
 <div>
 	<a href="#" class="menu <%= @settings.background %>-bg <%= @settings.skin %>"><img src="/images/threebars.png" id="image"></a>
 
@@ -74,10 +75,9 @@
 		<div id="submit">
 			<%= f.submit 'Submit' %>
 		</div>
-
+		<% end %>
 	</div>
 </div>
-<% end %>
 
 <%= yield %>
 <!--  -->

@@ -36,9 +36,9 @@ class UsersController < ApplicationController
 	def edit
 	end
 
-  def index
-    @user = User.all
-  end
+	def index
+   		@user = User.all
+	end
 
 	def destroy
 	end
