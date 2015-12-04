@@ -10,9 +10,9 @@
 
 <% if current_user %>
 <div>
-	<a href="#" class="menu <%= @settings.background %>-bg <%= @settings.skin %>"><img src="/images/threebars.png" id="image"></a>
+	<a href="#" class="menu <%= current_user.setting.background %>-bg <%= current_user.setting.skin %>"><img src="/images/threebars.png" id="image"></a>
 
-	<div class="settings <%= @settings.background %>-bg <%= @settings.skin %>">
+	<div class="settings <%= current_user.setting.background %>-bg <%= current_user.setting.skin %>">
 		<a href="#" class="menubox"><img src="/images/threebars.png" id="image"></a>
 		<br><br>
 
@@ -57,7 +57,7 @@
 			</div>
 		</div>
 			<br><br>
-		<%= form_for @settings, url: user_settings_path(@user) do |f| %>
+		<%= form_for current_user.setting, url: user_settings_path(current_user) do |f| %>
 		<%= f.hidden_field :frames %>
 		<%= f.hidden_field :style %>
 		<%= f.hidden_field :skin %>

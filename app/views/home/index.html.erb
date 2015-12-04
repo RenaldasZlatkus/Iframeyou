@@ -1,4 +1,4 @@
-<img src="images/frames4.jpg" id="bg">
+<img src="/images/frames4.jpg" id="bg">
 
 <h1>
 	Welcome! IFrameYou!
@@ -11,9 +11,9 @@
 <!-- sign-up link -->
 
 <div id="refs">
-	<p class="click leftclick"><a href = "javascript:void(0)" onclick = "createlightbox('signup-lightbox')"><img src="images/signupbutton.jpg"></a></p>
+	<p class="click leftclick"><a href = "javascript:void(0)" onclick = "createlightbox('signup-lightbox')"><img src="/images/signupbutton.jpg"></a></p>
 
-	<p class="click rightclick"><a href = "javascript:void(0)" onclick = "createlightbox('login-lightbox')"><img src="images/loginbutton.jpg"></a></p>
+	<p class="click rightclick"><a href = "javascript:void(0)" onclick = "createlightbox('login-lightbox')"><img src="/images/loginbutton.jpg"></a></p>
 </div>
 
 <table width="100%" align="left">
@@ -28,59 +28,56 @@
 						<span style="font-size:18px; color:rgba(0, 0, 0, 1)" >Signup Form</span>
 					</td>
 				</tr>
-
-				<tr>
-					<td class="label">              
-						<span style="color:rgba(0, 0, 0, .6)">First Name:</span>
-					</td>
-					<td align="center">
-						<input id="Text1" type="text" />
-					</td>
-				</tr>
-
-				<tr>
-					<td class="label">              
-						<span style="color:rgba(0, 0, 0, .6)">Last Name:</span>
-					</td>
-					<td align="center">
-						<input id="Text1" type="text" />
-					</td>
-				</tr>
-
+  				<%= form_for @user, url: '/users' do |f| %>
 				<tr>
 					<td class="label">
-						<span style="color:rgba(0, 0, 0, .6)">Email:</span>
+						<%= f.label :fname, 'First Name' %>
 					</td>
 					<td align="center">
-						<input id="Text1" type="text" />
+						<%= f.text_field :fname %>
 					</td>
 				</tr>
-
 				<tr>
-					<td class="label">
-						<span style="color:rgba(0, 0, 0, .6)">Password:</span>
+					<td class="label">            
+						<%= f.label :lname, 'Last' %>
 					</td>
 					<td align="center">
-						<input id="Text2" type="password"/>
+						<%= f.text_field :lname %>
 					</td>
 				</tr>
-
 				<tr>
 					<td class="label">
-						<span style="color:rgba(0, 0, 0, .6)">Confirm-Password:</span>
+						<%= f.label :email, 'Email' %>
 					</td>
 					<td align="center">
-						<input id="Text3" type="password" />
+						<%= f.text_field :email %>
+					</td>
+				</tr>
+				<tr>
+					<td class="label">
+						<%= f.label :password, 'Password' %>
+					</td>
+					<td align="center">
+						<%= f.password_field :password %>
+					</td>
+				</tr>
+				<tr>
+					<td class="label">
+						<%= f.label :password_confirmation, 'Password Confirmation' %>
+					</td>
+					<td align="center">
+						<%= f.password_field :password_confirmation %>
 					</td>
 				</tr><br>
-
 				<tr>
 					<td colspan="2" class="Title" align="center"><br>
-		<!-- 				<div style="align:center"> -->
-						<input id="Button1" type="button" value="Sign-Up!" style="width:100px; height:30px; font-size:16px; background:rgb(0, 0, 0" />
-						<!-- </div> -->
+	                     
+                      <%= f.submit :'Sign Up!' %>
+
+						
 					</td>
 				</tr>
+				<% end %>
 			</table>
 		</div>
 		</td>
@@ -104,27 +101,29 @@
 						<span style="font-size:18px; color:rgba(0, 0, 0, 1)" >Login Form</span>
 					</td>
 				</tr>
+				<%= form_for(:session, url: '/login') do |f| %>
 				<tr>
 					<td class="label">              
-						<span style="color:rgba(0, 0, 0, .6)">email:</span>
+						<%= f.label :email, 'Email' %>
 					</td>
 					<td align="center">
-						<input id="Text1" type="text" />
+						<%= f.text_field :email %>
 					</td>
 				</tr>
 				<tr>
 					<td class="label">              
-						<span style="color:rgba(0, 0, 0, .6)">Password:</span>
+						<%= f.label :password, 'Password' %>
 					</td>
 					<td align="center">
-						<input id="Text2" type="password" />
+						<%= f.password_field :password %>
 					</td>
 				</tr>
 				<tr><br>
 					<td colspan="2" class="Title" align="center"><br>         
-						<input id="Button1" type="button" value="Login!" style="width:100px; height:30px; font-size:16px; background:rgb(0, 0, 0"  />
+						<%= f.submit :'Login!' %>	
 					</td>
 				</tr>	
+				<% end %>
 			</table>
 		</div>
 		</td>

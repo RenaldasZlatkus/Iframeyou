@@ -7,7 +7,7 @@ Rails.application.routes.draw do
     resource :settings
   end
 
-  get 'home/index'
+  get 'home/index', as: 'home'
 
   get 'sessions/new'
 

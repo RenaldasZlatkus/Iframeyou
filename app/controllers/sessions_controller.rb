@@ -1,33 +1,36 @@
 class SessionsController < ApplicationController
+  def index
+  end
+#iets klopt hier niet
+  def show
+    @users = User.all
+  end
+
   def new
   end
 
-    def create
-    @user = User.where(email: params[:session][:email]).first
-    if @user && @user.password == params[:session][:password]
-      session[:user_id] = @user.id
-      redirect_to user_path @user 
-    else
-      puts "WE WENT TO ELSE"
-      redirect_to login_path
-    end
-  end
+        def create
+        user = User.find_by_email(params[:session][:email])
+        # If the user exists AND the password entered is correct.
+        if user && user.authenticate(params[:session][:password])
+          session[:user_id] = user.id
+          redirect_to user
+        else
+        # If user's login doesn't work, send them back to the login form.
+          redirect_to home_path
+        end
+      end
 
-  def update
-  end
+      def destroy
+        session[:user_id] = nil
+        redirect_to '/login'
+      end
+
+   def update
+   end
 
   def edit
   end
 
-  def destroy
-    session[:user_id] = nil
-    @current_user = nil
-    redirect_to login_path
-  end
-
-  def index
-  end
-
-  def show
-  end
 end
+
