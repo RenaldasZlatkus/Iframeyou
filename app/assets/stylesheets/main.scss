@@ -23,8 +23,7 @@
 
 .click {
 	// text-align: center;
-	font-size: 20px;
-	font-style: Arial Narrow;
+	font-size: 25px;
 	color: black;
 	display: inline;
 
@@ -95,12 +94,19 @@ h1 {
 
 // menubox itself
 .settings {
-	width: 220px;
+	width: 250px;
 	position: absolute;
 	top: 1px;
 	right: 1px;
-	color: white;
+	color: black;
 	padding-left: 7px;
+	font-size: 20px;
+}
+
+.category-box {
+	background: rgba(255, 255, 255, .7);
+	padding-left: 5px;
+	margin: 5px;
 }
 
 // icons in menubox
