@@ -8,14 +8,19 @@
 </head>
 <body>
 
+<%= flash[:notice] if flash[:notice] %> 
+<%= flash[:alert] if flash[:alert] %>
+
+<div id="showmenu">
 <% if current_user %>
-<div>
 	<a href="#" class="menu <%= current_user.setting.background %>-bg <%= current_user.setting.skin %>"><img src="/images/threebars.png" id="image"></a>
 
 	<div class="settings <%= current_user.setting.background %>-bg <%= current_user.setting.skin %>">
 		<a href="#" class="menubox"><img src="/images/threebars.png" id="image"></a>
 		<br><br>
-
+		<div class="category-box">
+			<a href="/" id="menu-home">Home</a>
+		</div>
 		<div class="category-box">
 			<p>
 				Frames and Layout
@@ -62,19 +67,19 @@
 		<%= f.hidden_field :style %>
 		<%= f.hidden_field :skin %>
 		<%= f.hidden_field :background %>
-		<div id="web1" class="categories">
+		<div id="web1" class="categories category-box">
 		<%= f.label :website1, 'Website For Frame One' %><br>
 		<%= f.text_field :website1 %><br><br>
 		</div>
-		<div id="web2" class="categories">
+		<div id="web2" class="categories category-box">
 		<%= f.label :website2, 'Website For Frame Two' %><br>
 		<%= f.text_field :website2 %><br><br>
 		</div>
-		<div id="web3" class="categories">
+		<div id="web3" class="categories category-box">
 		<%= f.label :website3, 'Website For Frame Three' %><br>
 		<%= f.text_field :website3 %><br><br>
 		</div>
-		<div id="web4" class="categories">
+		<div id="web4" class="categories category-box">
 		<%= f.label :website4, 'Website For Frame Four' %><br>
 		<%= f.text_field :website4 %><br><br>
 		</div>
@@ -83,8 +88,9 @@
 		</div>
 		<% end %>
 	</div>
-</div>
 <% end %>
+</div>
+
 <%= yield %>
 <!--  -->
 </body>

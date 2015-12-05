@@ -1,5 +1,8 @@
 <img src="/images/frames4.jpg" id="bg">
-
+	<style type="text/css">
+		#showmenu {
+			display: none
+		}</style>
 <h1>
 	Welcome! IFrameYou!
 </h1>
@@ -21,7 +24,7 @@
 		<td>
 		<div id="signup-lightbox" class="white_content" style="height:300px"> 
 			<a href = "javascript:void(0)" onclick = "closelightbox('signup-lightbox')" style="float:right">
-			<img src="http://2.bp.blogspot.com/-aXHXnOQPBJM/Tx_p1qqNI4I/AAAAAAAAAeU/bH0tlsikADQ/s1600/icon_cancel.gif" alt="" /></a>      
+			<img src="/images/icon_cancel.gif" alt="" /></a>      
 			<table align="center" cellpadding="5" cellspacing="5">
 				<tr>
 					<td colspan="2" class="Title" align="center">
@@ -39,7 +42,7 @@
 				</tr>
 				<tr>
 					<td class="label">            
-						<%= f.label :lname, 'Last' %>
+						<%= f.label :lname, 'Last Name' %>
 					</td>
 					<td align="center">
 						<%= f.text_field :lname %>
@@ -70,7 +73,7 @@
 					</td>
 				</tr><br>
 				<tr>
-					<td colspan="2" class="Title" align="center"><br>
+					<td colspan="2" class="title" align="center"><br>
 	                     
                       <%= f.submit :'Sign Up!' %>
 
@@ -119,7 +122,7 @@
 					</td>
 				</tr>
 				<tr><br>
-					<td colspan="2" class="Title" align="center"><br>         
+					<td colspan="2" class="title" align="center"><br>         
 						<%= f.submit :'Login!' %>	
 					</td>
 				</tr>	
