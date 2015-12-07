@@ -1,10 +1,15 @@
+<img src="/images/frames4.jpg" id="bg">
+	<style type="text/css">
+		#showmenu {
+			display: none
+		}</style>
 <h1>
 	Welcome to IFrameYou!
 </h1>
-
-<p>
-	Description
-</p>
+<!-- 
+<p id="description">
+	IFrameYou allows you to view up to four websites in one window. Just login (or sign up and login) to access this easy resource. Once you're in you'll see a menu icon on the top right corner. Click on it to select your user preferences and get started - easy peasy. Once you click submit, you'll find that YOU'VE BEEN FRAMED!
+</p> -->
 
 <!-- sign-up link -->
 
@@ -70,6 +75,80 @@ Password:</td>
 </td>
 </tr>
 </form>
+
+<div id="refs">
+	<p class="click leftclick"><a href = "javascript:void(0)" onclick = "createlightbox('signup-lightbox')"><img src="/images/signupbutton.jpg"></a></p>
+
+	<p class="click rightclick"><a href = "javascript:void(0)" onclick = "createlightbox('login-lightbox')"><img src="/images/loginbutton.jpg"></a></p>
+</div>
+
+<table width="100%" align="left">
+	<tr>
+		<td>
+		<div id="signup-lightbox" class="white_content" style="height:300px"> 
+			<a href = "javascript:void(0)" onclick = "closelightbox('signup-lightbox')" style="float:right">
+			<img src="/images/icon_cancel.gif" alt="" /></a>      
+			<table align="center" cellpadding="5" cellspacing="5">
+				<tr>
+					<td colspan="2" class="Title" align="center">
+						<span style="font-size:18px; color:rgba(0, 0, 0, 1)" >Signup Form</span>
+					</td>
+				</tr>
+  				<%= form_for @user, url: '/users' do |f| %>
+				<tr>
+					<td class="label">
+						<%= f.label :fname, 'First Name' %>
+					</td>
+					<td align="center">
+						<%= f.text_field :fname %>
+					</td>
+				</tr>
+				<tr>
+					<td class="label">            
+						<%= f.label :lname, 'Last Name' %>
+					</td>
+					<td align="center">
+						<%= f.text_field :lname %>
+					</td>
+				</tr>
+				<tr>
+					<td class="label">
+						<%= f.label :email, 'Email' %>
+					</td>
+					<td align="center">
+						<%= f.text_field :email %>
+					</td>
+				</tr>
+				<tr>
+					<td class="label">
+						<%= f.label :password, 'Password' %>
+					</td>
+					<td align="center">
+						<%= f.password_field :password %>
+					</td>
+				</tr>
+				<tr>
+					<td class="label">
+						<%= f.label :password_confirmation, 'Password Confirmation' %>
+					</td>
+					<td align="center">
+						<%= f.password_field :password_confirmation %>
+					</td>
+				</tr><br>
+				<tr>
+					<td colspan="2" class="title" align="center"><br>
+	                     
+                      <%= f.submit :'Sign Up!' %>
+
+						
+					</td>
+				</tr>
+				<% end %>
+			</table>
+		</div>
+		</td>
+	</tr>
+
 </table>   
 
 <div id="fade" class="black_overlay"></div>
@@ -78,38 +157,49 @@ Password:</td>
 <!-- login form -->
 
 <table width="100%" align="left">
-<tr><td>
-<p class="click"><a href = "javascript:void(0)" onclick = "createlightbox('login-lightbox')">login </a></p>
-
-<div id="login-lightbox" class="white_content" > 
-	<a href = "javascript:void(0)" onclick = "closelightbox('login-lightbox')" style="float:right">
-	<img src="http://2.bp.blogspot.com/-aXHXnOQPBJM/Tx_p1qqNI4I/AAAAAAAAAeU/bH0tlsikADQ/s1600/icon_cancel.gif" alt="" /></a>      
-	<table align="center" cellpadding="5" cellspacing="5" >
-<tr>
-	<td colspan="2" class="Title" align="center">Login Form</td>
-</tr>
 	<tr>
-	<td class="label">              
-		email:</td>
-		<td align="center">
-		<input id="Text1" type="text" /></td>
-	</tr>
-	<tr>
-	<td class="label">              
-		Password:</td>
-		<td align="center">
-		<input id="Text2" type="password" /></td>
-	</tr>
-		<tr>
-		<td>              
-	<input id="Button1" type="button" value="Login" />
-	</td>
-	</tr>
-	</table>
+		<td>
+		<div id="login-lightbox" class="white_content" > 
+			<a href = "javascript:void(0)" onclick = "closelightbox('login-lightbox')" style="float:right">
+			<img src="http://2.bp.blogspot.com/-aXHXnOQPBJM/Tx_p1qqNI4I/AAAAAAAAAeU/bH0tlsikADQ/s1600/icon_cancel.gif" alt="" /></a>      
+			<table align="center" cellpadding="5" cellspacing="5" >
+				<tr>
+					<td colspan="2" class="Title" align="center">
+						<span style="font-size:18px; color:rgba(0, 0, 0, 1)" >Login Form</span>
+					</td>
+				</tr>
+				<%= form_for(:session, url: '/login') do |f| %>
+				<tr>
+					<td class="label">              
+						<%= f.label :email, 'Email' %>
+					</td>
+					<td align="center">
+						<%= f.text_field :email %>
+					</td>
+				</tr>
+				<tr>
+					<td class="label">              
+						<%= f.label :password, 'Password' %>
+					</td>
+					<td align="center">
+						<%= f.password_field :password %>
+					</td>
+				</tr>
+				<tr><br>
+					<td colspan="2" class="title" align="center"><br>         
+						<%= f.submit :'Login!' %>	
+					</td>
+				</tr>	
+				<% end %>
+			</table>
 		</div>
 		</td>
+
 		</tr>
 		</form>
+
+	</tr>
+
 </table>
 
 

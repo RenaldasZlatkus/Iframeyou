@@ -1,10 +1,10 @@
 
-<% if @settings.style == "2H" %>
-	<iframe src="https://www.duckduckgo.com" class="full <%= @setting.background %>-bg <%= @setting.skin %>"></iframe>
-	<iframe src="http://nycda.com/" class="full <%= @setting.background %>-bg <%= @setting.skin %>"></iframe>
-<% elsif @settings.style == "2V" %>
-	<iframe src="https://www.duckduckgo.com" id="leftfull <%= @setting.background %>-bg <%= @setting.skin %>"></iframe>
-	<iframe src="http://nycda.com/" id="rightfull <%= @setting.background %>-bg <%= @setting.skin %>"></iframe>
+<% if @settings.style == "2h" %>
+	<iframe src="<%= @settings.website1 %>" class="full <%= @settings.background %>-bg <%= @settings.skin %>"></iframe>
+	<iframe src="<%= @settings.website2 %>" class="full <%= @settings.background %>-bg <%= @settings.skin %>"></iframe>
+<% elsif @settings.style == "2v" %>
+	<iframe src="<%= @settings.website1 %>" class="leftfull <%= @settings.background %>-bg <%= @settings.skin %>"></iframe>
+	<iframe src="<%= @settings.website2 %>" class="rightfull <%= @settings.background %>-bg <%= @settings.skin %>"></iframe>
 <% end %>
 
 

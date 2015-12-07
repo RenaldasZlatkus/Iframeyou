@@ -1,26 +1,33 @@
 class UsersController < ApplicationController
 
+
+  def index
+   		@user = User.all
+	end
+
   def new
    @user = User.new
   end
 
-  def create
-    @user = User.new(user_params)
-    if @user.save
-      flash[:notice] = "Your account was created succesfully."
-      redirect_to login_path
-    else
-      flash.now[:alert] = "There was a problem saving your account"
-      render "new"
-     end
-  end
+   def create
+      @user = User.new user_params
+      @settings = @user.setting
+      if @user.save
+        session[:user_id] = @user.id
+        flash[:notice] = "You have signed up for awesomeness:)"
+        redirect_to home_path
+      else
+        flash[:alert] = "nope"
+        redirect_to home_path
+      end
+    end
 
-	def show
+    def show
 		@user = User.find_by_id params[:id]
-		@settings = @user.settings.find_by_id params[:id]
+		@settings = @user.setting
 		if @settings.frames == 1
 			render :oneframe
-		elsif @ settings.frames == 2
+		elsif @settings.frames == 2
 			render :twoframe
 		elsif @settings.frames == 3
 			render :threeframe
@@ -35,11 +42,12 @@ class UsersController < ApplicationController
 	def edit
 	end
 
-  def index
-    @user = User.all
-  end
-
 	def destroy
 	end
+
+	private
+    def user_params
+      params.require(:user).permit( :fname, :lname, :email, :password, :password_confirmation)
+    end
 
 end
