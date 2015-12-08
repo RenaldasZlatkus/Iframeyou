@@ -4,6 +4,7 @@
 @import 'frame_style';
 @import 'skin';
 @import 'background';
+@import 'tooltip';
 // home page
 // background image
 #bg {
@@ -66,17 +67,15 @@
 h1 {
 	text-align: center;
 }
-// description ¶ though it's been commented out and added to the bg image
-#description {
-	width: 500px;
-	margin: auto;
-	font-style: Arial Narrow;
-	font-size: 20px;
+
+#flash {
+	text-align: center;
+	background: rgba(0, 0, 0, .8);
 	border: 3px solid black;
-	background: black;
-	opacity: .7;
-	color: aqua;
+	font-size: 23px;
+	color: white;
 }
+
 
  // general styling for menu image (three bars)
 .menu {
@@ -125,7 +124,6 @@ h1 {
 
 #menu-logout {
 
-	float: right;
 	text-decoration: none;
 	color: black;
 
@@ -133,17 +131,6 @@ h1 {
 		border: 1px solid black;
 		background: black;
 		color: white;
-	}
-}
-
-#menu-home {
-	text-decoration: none;
-	color: black;
-
-	&:hover {
-		color: white;
-		border: 1px solid black;
-		background: black;
 	}
 }
 

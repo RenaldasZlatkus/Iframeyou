@@ -1,4 +1,9 @@
 $(document).ready(function() {
+
+	$(".settings").hide();
+	$("#web2").hide();
+	$("#web3").hide();
+	$("#web4").hide();
 	$('#frames-and-layout a').click(function() {
 		value = $(this).data('field-value');
 		number = $(this).data('field-number');
@@ -19,54 +24,38 @@ $(document).ready(function() {
 	$(".menu").click(function() {
 		$(".settings").show();
 		$(".menu").hide();
-	})
+	});
 
 	$(".menubox").click(function() {
 		$(".settings").hide();
 		$(".menu").show();
-	})
-
-	$(document).ready(function() {
-		$(".settings").hide();
-		$("#web2").hide();
-		$("#web3").hide();
-		$("#web4").hide();		
-	})
+		$("#showtooltip").hide();
+	});
 
 	$(".one").click(function() {
 		$("#web2").hide();
 		$("#web3").hide();
 		$("#web4").hide();
-	})
+	});
 
 	$(".two").click(function() {
 		$("#web2").show();
 		$("#web3").hide();
 		$("#web4").hide();
-	})
+	});
 
 	$(".three").click(function() {
 		$("#web2").show();
 		$("#web3").show();
 		$("#web4").hide();
-	})
+	});
 
 	$(".four").click(function() {
 		$("#web2").show();
 		$("#web3").show();
 		$("#web4").show();
-	})
+	});
 
-	// $("#submit").click(function(){
-	// 	$(this).parents('form').submit();
-	// });
+	$("#flash" ).fadeOut(7000);
 
-// $(function(){
-//   $('input:checkbox').on('click', function(){
-//     $(this).parents('form').submit();
-//   });
-// });
-
-
-// });
 });

@@ -17,13 +17,16 @@ class SessionsController < ApplicationController
           redirect_to user
         else
         # If user's login doesn't work, send them back to the login form.
+          flash[:alert] = "Uh Oh! Something went wrong. Please reenter your credentials and try again."
           redirect_to home_path
         end
       end
 
       def destroy
-        session[:user_id] = nil
-        redirect_to '/login'
+        session.delete :user_id
+        flash[:alert] = "Your secrets are safe. You have successfully logged out."
+        redirect_to home_path
+
       end
 
    def update

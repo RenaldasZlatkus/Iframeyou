@@ -8,18 +8,25 @@
 </head>
 <body>
 
-<%= flash[:notice] if flash[:notice] %> 
-<%= flash[:alert] if flash[:alert] %>
+
+
 
 <div id="showmenu">
 <% if current_user %>
-	<a href="#" class="menu <%= current_user.setting.background %>-bg <%= current_user.setting.skin %>"><img src="/images/threebars.png" id="image"></a>
+	<a href="#" class="menu tooltip <%= current_user.setting.background %>-bg <%= current_user.setting.skin %>"><img src="/images/threebars.png" id="image">
+	    <span id="showtooltip">
+	        <img class="callout" src="/images/callout_black.gif" />
+
+	        <strong>Get Your Frame On!</strong><br />
+	        Click the menu bar to the right to get started. Click a selection under "Frames and Styles" to choose your view. Choose a "Skin" to determine the color of the frame border and chose a "Background" for your frames. Then just type in your websites and click submit!
+	    </span>
+	</a>
 
 	<div class="settings <%= current_user.setting.background %>-bg <%= current_user.setting.skin %>">
 		<a href="#" class="menubox"><img src="/images/threebars.png" id="image"></a>
 		<br><br>
 		<div class="category-box">
-			<a href="/" id="menu-home">Home</a>
+			<%= link_to "Log Out", logout_path, method: :delete, id: "menu-logout" %>
 		</div>
 		<div class="category-box">
 			<p>
