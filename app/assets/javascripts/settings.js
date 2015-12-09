@@ -58,4 +58,57 @@ $(document).ready(function() {
 
 	$("#flash" ).fadeOut(7000);
 
+// Styles 1, 3h, 2v
+	$("#fullscreen, .leftthree, .middlethree, .rightthree, .leftfull, .rightfull").height($(window).innerHeight());
+
+	$(window).resize(function(){
+		$("#fullscreen, .leftthree, .middlethree, .rightthree, .leftfull, .rightfull").height($(window).innerHeight())
+	});
+// Style 1
+	$("#fullscreen").width($(window).innerWidth()*.99);
+
+	$(window).resize(function(){
+		$("#fullscreen").width($(window).innerWidth()*.99)
+	});
+// Styles 3t, 3b, 2h
+	$(".full").width($(window).innerWidth()*.9795);
+
+	$(window).resize(function(){
+		$("#.full").width($(window).innerWidth()*.9795)
+	});
+// Styles 2h, 3t, 3b, 4a, 4t, 4b
+
+	$(".full, .left, .right, .halfleftthree, .halfmiddlethree, .halfrightthree").height($(window).innerHeight()/2);
+
+	$(window).resize(function(){
+		$(".full, .left, .right, .halfleftthree, .halfmiddlethree, .halfrightthree").height($(window).innerHeight()/2)
+	});
+// Styles 2v, 4a, 3t, 3b
+	$(".leftfull, .rightfull, .left, .right").width($(window).innerWidth()*.485);
+
+	$(window).resize(function(){
+		$(".leftfull, .rightfull, .left, .right").width($(window).innerWidth()*.485);
+	});
+
+// Style 3h, 4t, 4b
+	$(".leftthree, .middlethree, .rightthree, .halfleftthree, .halfmiddlethree, .halfrightthree").width($(window).innerWidth()*.325);
+
+	$(window).resize(function(){
+		$(".leftthree, .middlethree, .rightthree, .halfleftthree, .halfmiddlethree, .halfrightthree").width($(window).innerWidth()*.485)
+	});
+
 });
+
+
+// $(window).resize(function(){ console.log($(window).innerHeight()) })
+
+
+
+// 	$(window).resize(function(){
+// 	$("#fullscreen").height($(window).innerHeight())
+
+// 	});
+
+
+
+

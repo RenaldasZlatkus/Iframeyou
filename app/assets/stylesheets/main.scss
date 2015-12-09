@@ -12,7 +12,7 @@
 	position: absolute;
 	top: 0px;
 	left: 0px;
-	z-index: -10;
+	z-index: -30;
 }
 // sign up and login links
 #refs {
@@ -80,8 +80,8 @@ h1 {
  // general styling for menu image (three bars)
 .menu {
 	position: absolute;
-	top: 5px;
-	right: 5px;
+	top: 13px;
+	right: 15px;
 	width: 30px;
 	text-align: center;
 	height: 30px;
@@ -91,8 +91,8 @@ h1 {
 // general styling for menu image in opened menubox
 .menubox {
 	position: absolute;
-	top: 4px;
-	right: 9px;
+	top: 12px;
+	right: 19px;
 }
 
 // styling for image in particular
@@ -146,6 +146,12 @@ h1 {
 		top: 1px;
 		left: 1px;
 		box-shadow: none;
+	}
+
+	&::selection {
+		width: 20px;
+		border: 1px solid black;
+		box-shadow: 0px 1px 3px #666666;
 	}
 }
 
