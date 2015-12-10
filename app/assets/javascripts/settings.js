@@ -11,6 +11,47 @@ $(document).ready(function() {
 		$('#setting_frames').val(number);
 	});
 
+	// $('.selector').click(function(){
+	//     $(this).parent().find('.selector').css('background-color','#ffffff');
+	//     $(this).css('background-color','#ff0000');
+
+	// $('.icon').click(function() {
+ //    	// $(this).parent().find('.icon').addClass('selected');
+ //    	$(this).addClass('selected');
+ //    	$(this).next('.icon').removeClass('selected');
+ //    });
+
+	$('#frames-and-layout img').click(function() {
+	     	$('.selectedStyle').removeClass('selectedStyle');
+	      	$(this).addClass('icon, selectedStyle');
+	});
+
+	$('#skin img').click(function() {
+	     	$('.selectedSkin').removeClass('selectedSkin');
+	      	$(this).addClass('selectedSkin');
+	});
+
+	$('#background img').click(function() {
+	     	$('.selectedBg').removeClass('selectedBg');
+	      	$(this).addClass('selectedBg');
+	});
+
+	// function mouseHandler(e){
+	//   // Add Picked Class
+	//     if ($('.icon').hasClass('selected')) {
+	//       	$('.icon').removeClass('selected');
+	//     } else {
+	//      	// $('.selected').removeClass('selected');
+	//       	$('.icon').addClass('selected');
+	//     } 
+	// }
+	 
+	//   function start(){
+	//     // Bind all li
+	//     $('#frames-and-layout icon').click(mouseHandler);
+	//  };
+
+
 	$('#skin a').click(function() {
 		value = $(this).data('field-value');
 		$('#setting_skin').val(value);
@@ -109,6 +150,13 @@ $(document).ready(function() {
 
 // 	});
 
+	// $('#frames-and-layout a').click(function() {
+	// 	$(this).next('.icon').show();
+	// 	$('.icon').hide();
+	// });
 
-
+	// $('#frames-and-layout').click(function() {
+	// 	$('.icon').css("width": "20px", "border": "2px solid black", "box-shadow": "0px 1px 3px #666666");
+	// 	$(this).next('.icon').css("width": "20px", "border": "1px solid black", "box-shadow": "0px 1px 3px #666666");
+	// });
 
