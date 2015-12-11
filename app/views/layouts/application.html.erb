@@ -18,11 +18,18 @@
 		        <img class="callout" src="/images/callout_black.gif" />
 
 		        <strong>Get Your Frame On!</strong><br />
-		        Click the menu bar to the right to get started. Click a selection under "Frames and Styles" to choose your view. Choose a "Skin" to determine the color of the frame border and chose a "Background" for your frames. Then just type in your websites and click submit!
+		        Click the menu button to the right to get started. Click a selection under "Frames and Styles" to choose your view. Choose a "Skin" to determine the color of the frame border and chose a "Background" for your frames. Then just type in your websites and click submit!
 		    </span>
 		</a>
 	<% else %>
-		<a href="#" class="menu <%= current_user.setting.background %>-bg <%= current_user.setting.skin %>"><img src="/images/threebars.png" id="image">
+		<a href="#" class="menu tooltip <%= current_user.setting.background %>-bg <%= current_user.setting.skin %>"><img src="/images/threebars.png" id="image">
+		    <span id="fadetooltip">
+		        <img class="callout" src="/images/callout_black.gif" />
+
+		        <strong>Get Your Frame On!</strong><br />
+		        Remember to click the menu button to the right to change your settings.
+		    </span>
+		</a>
 	<% end %>
 
 	<div class="settings <%= current_user.setting.background %>-bg <%= current_user.setting.skin %>">

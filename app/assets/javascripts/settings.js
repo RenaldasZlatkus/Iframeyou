@@ -105,6 +105,8 @@ $(document).ready(function() {
 		$(".leftthree, .middlethree, .rightthree, .halfleftthree, .halfmiddlethree, .halfrightthree").outerWidth(Math.floor($(window).innerWidth()/3))
 	});
 
+	$("#fadetooltip").delay(5000).fadeOut(2000);
+
 });
 
 
