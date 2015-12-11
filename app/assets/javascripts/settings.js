@@ -11,21 +11,6 @@ $(document).ready(function() {
 		$('#setting_frames').val(number);
 	});
 
-	$('#frames-and-layout img').click(function() {
-	     	$('.selectedStyle').removeClass('selectedStyle');
-	      	$(this).addClass('icon, selectedStyle');
-	});
-
-	$('#skin img').click(function() {
-	     	$('.selectedSkin').removeClass('selectedSkin');
-	      	$(this).addClass('selectedSkin');
-	});
-
-	$('#background img').click(function() {
-	     	$('.selectedBg').removeClass('selectedBg');
-	      	$(this).addClass('selectedBg');
-	});
-
 	$('#skin a').click(function() {
 		value = $(this).data('field-value');
 		$('#setting_skin').val(value);
@@ -34,6 +19,21 @@ $(document).ready(function() {
 	$('#background a').click(function() {
 		value = $(this).data('field-value');
 		$('#setting_background').val(value);
+	});
+
+	$('#frames-and-layout img').click(function() {
+	     	$('.selectedStyle').removeClass('selectedStyle');
+	      	$(this).addClass('icon, selectedStyle');
+	});
+
+	$('#skin img').click(function() {
+	     	$('.selectedSkin').removeClass('selectedSkin');
+	      	$(this).addClass('icon, selectedSkin');
+	});
+
+	$('#background img').click(function() {
+	     	$('.selectedBg').removeClass('selectedBg');
+	      	$(this).addClass('icon, selectedBg');
 	});
 
 	$(".menu").click(function() {
@@ -74,41 +74,35 @@ $(document).ready(function() {
 	$("#flash" ).fadeOut(7000);
 
 // Styles 1, 3h, 2v
-	$("#fullscreen, .leftthree, .middlethree, .rightthree, .leftfull, .rightfull").height($(window).innerHeight());
-
+	$("#fullscreen, .leftthree, .middlethree, .rightthree, .leftfull, .rightfull").outerHeight($(window).innerHeight());
 	$(window).resize(function(){
-		$("#fullscreen, .leftthree, .middlethree, .rightthree, .leftfull, .rightfull").height($(window).innerHeight())
+		$("#fullscreen, .leftthree, .middlethree, .rightthree, .leftfull, .rightfull").outerHeight($(window).innerHeight())
 	});
-// Style 1
-	$("#fullscreen").width($(window).innerWidth()*.99);
-	$(window).resize(function(){
-		$("#fullscreen").width($(window).innerWidth()*.99)
-	});
-// Styles 3t, 3b, 2h
-	$(".full").width($(window).innerWidth()*.9795);
 
+// Styles 1, 3t, 3b, 2h
+	$(".full, #fullscreen").outerWidth($(window).innerWidth());
 	$(window).resize(function(){
-		$(".full").width($(window).innerWidth()*.9795)
+		$(".full, #fullscreen").outerWidth($(window).innerWidth())
 	});
 // Styles 2h, 3t, 3b, 4a, 4t, 4b
 
-	$(".full, .left, .right, .halfleftthree, .halfmiddlethree, .halfrightthree").height($(window).innerHeight()/2);
+	$(".full, .left, .right, .halfleftthree, .halfmiddlethree, .halfrightthree").outerHeight($(window).innerHeight()*.5);
 
 	$(window).resize(function(){
-		$(".full, .left, .right, .halfleftthree, .halfmiddlethree, .halfrightthree").height($(window).innerHeight()/2)
+		$(".full, .left, .right, .halfleftthree, .halfmiddlethree, .halfrightthree").outerHeight($(window).innerHeight()*.5)
 	});
 // Styles 2v, 4a, 3t, 3b
-	$(".leftfull, .rightfull, .left, .right").width($(window).innerWidth()*.485);
+	$(".leftfull, .rightfull, .left, .right").outerWidth($(window).innerWidth()/2);
 
 	$(window).resize(function(){
-		$(".leftfull, .rightfull, .left, .right").width($(window).innerWidth()*.485);
+		$(".leftfull, .rightfull, .left, .right").outerWidth($(window).innerWidth()/2);
 	});
 
 // Style 3h, 4t, 4b
-	$(".leftthree, .middlethree, .rightthree, .halfleftthree, .halfmiddlethree, .halfrightthree").width($(window).innerWidth()*.325);
+	$(".leftthree, .middlethree, .rightthree, .halfleftthree, .halfmiddlethree, .halfrightthree").outerWidth(Math.floor($(window).innerWidth()/3));
 
 	$(window).resize(function(){
-		$(".leftthree, .middlethree, .rightthree, .halfleftthree, .halfmiddlethree, .halfrightthree").width($(window).innerWidth()*.485)
+		$(".leftthree, .middlethree, .rightthree, .halfleftthree, .halfmiddlethree, .halfrightthree").outerWidth(Math.floor($(window).innerWidth()/3))
 	});
 
 });
