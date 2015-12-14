@@ -1,0 +1,56 @@
+// icons in menubox
+.icon1 {
+	width: 20px;
+	border: 2px s black;
+	box-shadow: 0px 1px 3px #666666;
+
+	&:active {
+		position: relative;
+		top: 1px;
+		left: 1px;
+		box-shadow: none;
+	}
+
+	&:hover {
+		width: 20px;
+		border: 1px solid black;
+		box-shadow: 0px 1px 3px #666666;
+	}
+}
+
+.icon2 {
+	width: 20px;
+	border: 4px s black;
+	box-shadow: 0px 1px 3px #666666;
+
+	&:active {
+		position: relative;
+		top: 1px;
+		left: 1px;
+		box-shadow: none;
+	}
+
+	&:hover {
+		width: 20px;
+		border: 2px solid black;
+		box-shadow: 0px 1px 3px #666666;
+	}
+}
+
+.selectedStyle {
+		width: 20px;
+		border: 1px solid black;
+		box-shadow: 0px 1px 3px #666666;
+}
+
+.selectedSkin {
+		width: 20px;
+		border: 2px solid black;
+		box-shadow: 0px 1px 3px #666666;
+}
+
+.selectedBg {
+		width: 20px;
+		border: 2px solid black;
+		box-shadow: 0px 1px 3px #666666;
+}

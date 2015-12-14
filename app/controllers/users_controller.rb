@@ -17,7 +17,7 @@ class UsersController < ApplicationController
         flash[:notice] = "You have signed up for awesomeness:)"
         redirect_to home_path
       else
-        flash[:alert] = "nope"
+        flash[:alert] = "We were unable to sign you up. Please try again."
         redirect_to home_path
       end
     end
@@ -25,6 +25,10 @@ class UsersController < ApplicationController
     def show
 		@user = User.find_by_id params[:id]
 		@settings = @user.setting
+    if session[:user_id] != @user.id
+      redirect_to home_path
+      return
+    end
 		if @settings.frames == 1
 			render :oneframe
 		elsif @settings.frames == 2

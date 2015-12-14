@@ -8,57 +8,74 @@
 </head>
 <body>
 
-<%= flash[:notice] if flash[:notice] %> 
-<%= flash[:alert] if flash[:alert] %>
+
 
 <div id="showmenu">
 <% if current_user %>
-	<a href="#" class="menu <%= current_user.setting.background %>-bg <%= current_user.setting.skin %>"><img src="/images/threebars.png" id="image"></a>
+	<% if current_user.setting.created_at == current_user.setting.updated_at %>
+		<a href="#" class="menu tooltip <%= current_user.setting.background %>-bg <%= current_user.setting.skin %>"><img src="/images/threebars.png" id="image">
+		    <span id="showtooltip">
+		        <img class="callout" src="/images/callout_black.gif" />
+
+		        <strong>Get Your Frame On!</strong><br />
+		        Click the menu button to the right to get started. Click a selection under "Frames and Styles" to choose your view. Choose a "Skin" to determine the color of the frame border and chose a "Background" for your frames. Then just type in your websites and click submit!
+		    </span>
+		</a>
+	<% else %>
+		<a href="#" class="menu tooltip <%= current_user.setting.background %>-bg <%= current_user.setting.skin %>"><img src="/images/threebars.png" id="image">
+		    <span id="fadetooltip">
+		        <img class="callout" src="/images/callout_black.gif" />
+
+		        <strong>Get Your Frame On!</strong><br />
+		        Remember to click the menu button to the right to change your settings.
+		    </span>
+		</a>
+	<% end %>
 
 	<div class="settings <%= current_user.setting.background %>-bg <%= current_user.setting.skin %>">
 		<a href="#" class="menubox"><img src="/images/threebars.png" id="image"></a>
 		<br><br>
 		<div class="category-box">
-			<a href="/" id="menu-home">Home</a>
+			<%= link_to "Log Out", logout_path, method: :delete, id: "menu-logout" %>
 		</div>
 		<div class="category-box">
 			<p>
-				Frames and Layout
+				Layout
 			</p>
-			<div id="frames-and-layout">
-				<a href="#" class="options" data-field-value="1" data-field-number="1"><img src="/images/1.png" class="icon one"></a>
-				<a href="#" class="options" data-field-value="2h" data-field-number="2"><img src="/images/2h.png" class="icon two"></a>
-				<a href="#" class="options" data-field-value="2v" data-field-number="2"><img src="/images/2v.png" class="icon two"></a>
-				<a href="#" class="options" data-field-value="3h" data-field-number="3"><img src="/images/3h.png" class="icon three"></a>
-				<a href="#" class="options" data-field-value="3t"  data-field-number="3"><img src="/images/3t.png" class="icon three"></a>
-				<a href="#" class="options" data-field-value="3b"  data-field-number="3"><img src="/images/3b.png" class="icon three"></a>
-				<a href="#" class="options" data-field-value="4a" data-field-number="4"><img src="/images/4a.png" class="icon four"></a>
-				<a href="#" class="options" data-field-value="4t" data-field-number="4"><img src="/images/4t.png" class="icon four"></a>
-				<a href="#" class="options" data-field-value="4b" data-field-number="4"><img src="/images/4b.png" class="icon four"></a>
+			<div id="frames-and-layout" class="parent">
+				<a href="#" class="options" data-field-value="1" data-field-number="1"><img src="/images/1.png" class="icon1 one"></a>
+				<a href="#" class="options" data-field-value="2h" data-field-number="2"><img src="/images/2h.png" class="icon1 two"></a>
+				<a href="#" class="options" data-field-value="2v" data-field-number="2"><img src="/images/2v.png" class="icon1 two"></a>
+				<a href="#" class="options" data-field-value="3h" data-field-number="3"><img src="/images/3h.png" class="icon1 three"></a>
+				<a href="#" class="options" data-field-value="3t"  data-field-number="3"><img src="/images/3t.png" class="icon1 three"></a>
+				<a href="#" class="options" data-field-value="3b"  data-field-number="3"><img src="/images/3b.png" class="icon1 three"></a>
+				<a href="#" class="options" data-field-value="4a" data-field-number="4"><img src="/images/4a.png" class="icon1 four"></a>
+				<a href="#" class="options" data-field-value="4t" data-field-number="4"><img src="/images/4t.png" class="icon1 four"></a>
+				<a href="#" class="options" data-field-value="4b" data-field-number="4"><img src="/images/4b.png" class="icon1 four"></a>
 			</div>
 		</div>
 		<div class="category-box">
 			<p>
 				Skin
 			</p>
-			<div id="skin">
-				<a href="#" class="options" data-field-value="black"><img src="/images/black.png" class="icon"></a>
-				<a href="#" class="options" data-field-value="white"><img src="/images/white.png" class="icon"></a>
-				<a href="#" class="options" data-field-value="pink"><img src="/images/pink.png" class="icon"></a>
-				<a href="#" class="options" data-field-value="purple"><img src="/images/purple.png" class="icon"></a>
-				<a href="#" class="options" data-field-value="blue"><img src="/images/blue.png" class="icon"></a>
+			<div id="skin" class="parent">
+				<a href="#" class="options" data-field-value="black"><img src="/images/1.png" class="icon2"></a>
+				<a href="#" class="options" data-field-value="white"><img src="/images/whites.png" class="icon2"></a>
+				<a href="#" class="options" data-field-value="pink"><img src="/images/pinks.png" class="icon2"></a>
+				<a href="#" class="options" data-field-value="purple"><img src="/images/purples.png" class="icon2"></a>
+				<a href="#" class="options" data-field-value="blue"><img src="/images/blues.png" class="icon2"></a>
 			</div>
 		</div>
 		<div class="category-box">
 		<p>
 			Background
 		</p>
-			<div id="background">
-				<a href="#" class="options" data-field-value="black"><img src="/images/black.png" class="icon"></a>
-				<a href="#" class="options" data-field-value="white"><img src="/images/white.png" class="icon"></a>
-				<a href="#" class="options" data-field-value="pink"><img src="/images/pink.png" class="icon"></a>
-				<a href="#" class="options" data-field-value="purple"><img src="/images/purple.png" class="icon"></a>
-				<a href="#" class="options" data-field-value="blue"><img src="/images/blue.png" class="icon"></a>
+			<div id="background" class="parent">
+				<a href="#" class="options" data-field-value="black"><img src="/images/black.png" class="icon2"></a>
+				<a href="#" class="options" data-field-value="white"><img src="/images/white.png" class="icon2"></a>
+				<a href="#" class="options" data-field-value="pink"><img src="/images/pink.png" class="icon2"></a>
+				<a href="#" class="options" data-field-value="purple"><img src="/images/purple.png" class="icon2"></a>
+				<a href="#" class="options" data-field-value="blue"><img src="/images/blue.png" class="icon2"></a>
 			</div>
 		</div>
 			<br><br>

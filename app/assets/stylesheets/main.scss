@@ -4,14 +4,21 @@
 @import 'frame_style';
 @import 'skin';
 @import 'background';
+@import 'tooltip';
+@import 'icons';
 // home page
 // background image
+
+body {
+	margin: 0;
+}
+
 #bg {
 	width: 100%;
 	position: absolute;
 	top: 0px;
 	left: 0px;
-	z-index: -10;
+	z-index: -30;
 }
 // sign up and login links
 #refs {
@@ -66,23 +73,21 @@
 h1 {
 	text-align: center;
 }
-// description ¶ though it's been commented out and added to the bg image
-#description {
-	width: 500px;
-	margin: auto;
-	font-style: Arial Narrow;
-	font-size: 20px;
+
+#flash {
+	text-align: center;
+	background: rgba(0, 0, 0, .8);
 	border: 3px solid black;
-	background: black;
-	opacity: .7;
-	color: aqua;
+	font-size: 23px;
+	color: white;
 }
+
 
  // general styling for menu image (three bars)
 .menu {
 	position: absolute;
-	top: 5px;
-	right: 5px;
+	top: 13px;
+	right: 15px;
 	width: 30px;
 	text-align: center;
 	height: 30px;
@@ -92,8 +97,8 @@ h1 {
 // general styling for menu image in opened menubox
 .menubox {
 	position: absolute;
-	top: 4px;
-	right: 9px;
+	top: 12px;
+	right: 19px;
 }
 
 // styling for image in particular
@@ -125,7 +130,6 @@ h1 {
 
 #menu-logout {
 
-	float: right;
 	text-decoration: none;
 	color: black;
 
@@ -136,36 +140,26 @@ h1 {
 	}
 }
 
-#menu-home {
-	text-decoration: none;
-	color: black;
 
-	&:hover {
-		color: white;
-		border: 1px solid black;
-		background: black;
-	}
-}
-
-// icons in menubox
-.icon {
-	width: 20px;
-	border: 2px s black;
-	box-shadow: 0px 1px 3px #666666;
-
-
-	&:active {
-		position: relative;
-		top: 1px;
-		left: 1px;
-		box-shadow: none;
-	}
-}
 
 // submit button
 #submit {
 	text-align: center;
 }
+
+.parentDiv {
+  border: 1px solid black;
+  padding: 10px;
+  width: 80px;
+  margin: 5px;
+  display: relative;
+}
+.childDiv {
+  border: 1px solid blue;
+  height: 50px;
+  margin: 10px;
+}
+
 
 // #menubutton {
 // 	margin: auto;
